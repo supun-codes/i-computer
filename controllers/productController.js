@@ -84,7 +84,7 @@ export async function deleteProduct(req,res){
 export async function updateProduct(req,res){
 
     if(req.user!=null && req.user.isAdmin){
-
+        
         try{
 
             if(req.body.productId != null){

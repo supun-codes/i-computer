@@ -4,8 +4,12 @@ import studentRouter from './routers/studentRouter.js'
 import userRouter from './routers/userRouter.js'
 import authenticate from './middlewares/authenticate.js'
 import productRouter from './routers/productRouter.js'
+import dotenv from 'dotenv'
 
-const mongoDBURI = "mongodb+srv://admin:123@cluster0.kmtvjzk.mongodb.net/?appName=Cluster0"
+dotenv.config()
+
+
+const mongoDBURI = process.env.mongoDBURI
 
 mongoose.connect(mongoDBURI).then(
     ()=>{
