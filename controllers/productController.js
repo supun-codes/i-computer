@@ -94,7 +94,7 @@ export async function updateProduct(req,res){
 
             await Product.updateOne( {productId : req.params.productId} , req.body )
 
-            res.json({message : "Product updated successfully"})
+            res.json({message : "Product updated successfull"})
 
         }catch(err){
             res.status(500).json({message : err.message})
